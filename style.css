@@ -1210,3 +1210,8 @@ bdi[dir="ltr"]{white-space:nowrap}
 @media (max-width:720px){.hero .kick{font-size:20px;margin:20px 0 10px}}
 #price .plans .vsone{margin-top:8px}
 .src{font-size:13px}
+#proof .pf{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:28px;max-width:720px}
+#proof .pf div{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:20px 16px;display:flex;flex-direction:column;gap:6px}
+#proof .pf b{font-size:44px;font-weight:900;font-style:italic;color:var(--lime);line-height:1;text-shadow:0 0 24px rgba(232,255,60,.25)}
+#proof .pf span{color:var(--ink2);font-size:15px;font-weight:700;white-space:nowrap}
+@media (max-width:720px){#proof .pf{gap:8px}#proof .pf div{padding:16px 12px}#proof .pf b{font-size:30px}#proof .pf span{font-size:13px}}
