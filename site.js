@@ -156,7 +156,7 @@ function show(i,f){k=(i+N)%N;st.style.setProperty('--k',k);
  tabs.forEach(function(b,j){b.classList.toggle('on',j===k);b.setAttribute('aria-selected',j===k);b.querySelector('.bar').style.setProperty('--f',0)});
  lis.forEach(function(l,j){l.classList.toggle('on',j===k);l.querySelector('.bar').style.setProperty('--f',0)});
  var li=lis[k];cur.querySelector('h3').textContent=li.querySelector('b').textContent;cur.querySelector('p').textContent=li.querySelector('small').textContent;
- if(tabs[k]&&tabs[k].scrollIntoView)try{tabs[k].scrollIntoView({inline:'center',block:'nearest',behavior:'smooth'})}catch(e){}
+ var tb=tabs[k],u=tb&&tb.parentNode;if(u&&u.scrollWidth>u.clientWidth){var r=tb.getBoundingClientRect(),q=u.getBoundingClientRect();u.scrollBy({left:(r.left+r.width/2)-(q.left+q.width/2),behavior:'smooth'})}
  DUR=cfg.durs[k]||5000;t0=performance.now()-(f||0)*DUR;paint(f||0)}
 function frame(now){raf=null;if(!on)return;var f=Math.min(1,(now-t0)/DUR);paint(f);if(f>=1){if(auto)show(k+1);else return}raf=requestAnimationFrame(frame)}
 function start(){if(on)return;on=true;t0=performance.now()-fl*DUR;if(!raf)raf=requestAnimationFrame(frame)}
