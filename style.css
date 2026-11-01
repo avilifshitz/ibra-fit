@@ -1183,3 +1183,15 @@ bdi[dir="ltr"]{white-space:nowrap}
 
 .mo.rec.days{width:auto;max-width:420px;margin-top:20px;padding:4px 16px;border:1px solid var(--line);border-radius:18px;background:var(--card);font-size:16px}.mo.rec.days>div{padding:12px 0}.mo.rec.days b{font-variant-numeric:tabular-nums}
 .stat{display:block;max-width:420px;margin-top:20px;padding:18px 20px;border:1px solid var(--line);border-radius:18px;background:var(--card);color:inherit;text-decoration:none}.stat small{display:block;font-size:13px;color:var(--muted);font-weight:700}.stat b{display:block;font-size:56px;font-weight:900;font-style:italic;color:var(--lime);line-height:1.1;margin-top:4px}.stat b span{font-size:22px}.stat>span{display:block;font-size:15px;color:var(--ink2);margin-top:4px}
+
+/* המאמן ראה: חזית ואז גב, צלליות מהתמונות */
+#coachshot .cs-photo{background:linear-gradient(#26292e,#17191c)}
+#coachshot .pv{position:absolute;inset:0;display:flex;justify-content:center;transition:opacity .45s}
+#coachshot .pb{opacity:0}#coachshot.m2 .pb{opacity:1}#coachshot.m2 .pf{opacity:0}
+#coachshot .pw{position:relative;height:100%;padding-top:3cqw;box-sizing:border-box}
+#coachshot .pw img{height:100%;width:auto;display:block;border:0;border-radius:0;box-shadow:none;max-width:none}
+#coachshot .pw svg{position:absolute;inset:3cqw 0 0 0;width:100%;height:calc(100% - 3cqw);overflow:visible}
+#coachshot .pw .cs-m line{stroke-width:3}#coachshot .pw .cs-m text{font-size:24px}
+#coachshot .cs-fs{display:grid}#coachshot .cs-fs>.cs-f{grid-area:1/1}
+#coachshot.m2 .f1{opacity:0}
+.mo.cam img.sil{height:108px;width:auto;border:0;border-radius:0;box-shadow:none;max-width:none}
