@@ -895,7 +895,6 @@ html:not(.js) .scene .txts>*{position:static;opacity:1;transform:none;margin-top
 .hw .sh-acts div{display:flex;align-items:center;justify-content:space-between;padding:3.2cqw 4cqw;font-size:4.1cqw;border-top:1px solid #3a3a3c}
 .hw .sh-acts div:first-child{border-top:0}.hw .sh-acts svg{width:5.5cqw;height:5.5cqw}
 /* הכותרת במחשב: הדלתא, קישורים בהירים, המקטע הנוכחי בקו ליים, והורדה בליים */
-.site nav .get{display:none}
 @media (min-width:761px){
   .site .wrap>nav{height:76px}
   .site .brand{font-size:26px}
@@ -904,9 +903,6 @@ html:not(.js) .scene .txts>*{position:static;opacity:1;transform:none;margin-top
   .site .wrap>nav ul a{position:relative;padding:10px 0}
   .site .wrap>nav ul a.on{color:#fff}
   .site .wrap>nav ul a.on::after{content:"";position:absolute;inset-inline:0;bottom:2px;height:2px;border-radius:2px;background:var(--lime)}
-  .site .wrap>nav .get{display:inline-flex;align-items:center;height:42px;padding:0 20px;border-radius:21px;background:var(--lime);color:#0A0A0C;font-weight:900;font-size:15px;text-decoration:none;box-shadow:0 0 24px rgba(232,255,60,.25)}
-  .site .wrap>nav .get:hover{text-decoration:none;filter:brightness(1.05)}
-  .site .wrap>nav .badges{display:none}
 }
 .vj-vj{position:relative;overflow:hidden}
 .vj-vj .vj-in{will-change:transform}
@@ -1210,3 +1206,7 @@ bdi[dir="ltr"]{white-space:nowrap}
 .gearcard .chip.addin{width:150px;background:#232327;border-color:#fff;color:#fff;font:inherit;font-weight:800;font-size:17px;outline:none}
 .gearcard #dbr{cursor:pointer}
 .gearcard .chip[hidden]{display:none}
+.hero .kick{color:var(--muted);font-size:18px;font-weight:700;margin:0 0 12px}
+@media (max-width:720px){.hero .kick{font-size:16px;margin:20px 0 8px}}
+#price .plans .vsone{margin-top:8px}
+.src{font-size:13px}
