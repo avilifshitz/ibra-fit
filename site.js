@@ -167,10 +167,28 @@ if('IntersectionObserver' in window){new IntersectionObserver(function(es){es[0]
 window.__steppers[st.getAttribute('data-stepper')]={show:function(i,f){auto=false;stop();show(i,f)}}});
 window.__stepper=window.__steppers.how})();
 
-// הציוד: הצ'יפים נדלקים לפי הגלילה. בלי JS או עם reduced-motion — כולם דלוקים.
-(function(){var g=document.querySelector('.gearcard');if(!g||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
-var ch=[].slice.call(g.querySelectorAll('.chip[data-k]')),sum=g.querySelector('.sum'),raf=0;
-function paint(){raf=0;var r=g.getBoundingClientRect(),h=innerHeight,p=(h-r.top)/(h*0.6);p=Math.max(0,Math.min(1,p));
+// הציוד: הצ'יפים נדלקים לפי הגלילה, עד ההקשה הראשונה. מאז — המשתמש מסמן.
+(function(){var g=document.querySelector('.gearcard');if(!g)return;
+var box=g.querySelector('#gchips'),sum=g.querySelector('#gsum'),gym=box.querySelector('[data-gym]'),add=g.querySelector('#gadd'),inp=g.querySelector('#gin'),touched=false,raf=0;
+function items(){return [].slice.call(box.querySelectorAll('.chip:not(.add):not(.addin)'))}
+function render(){var on=items().filter(function(c){return c.classList.contains('on')});
+ if(gym.classList.contains('on'))sum.innerHTML='חדר כושר מאובזר. <em>יש שם הכל.</em>';
+ else if(!on.length)sum.textContent='סמן לפחות פריט אחד, או חדר כושר.';
+ else sum.innerHTML=on.length+(on.length===1?' פריט':' פריטים')+'. <em>'+(on.length>=3?'מספיק לתוכנית מלאה.':'המאמן בונה לזה.')+'</em>';
+ sum.classList.add('on')}
+window.__gearRender=function(){touched=true;gym.classList.remove('on');render()};
+box.addEventListener('click',function(e){var c=e.target.closest('.chip');if(!c||c===inp)return;if(e.target.closest('#dbr'))return;
+ touched=true;if(c===add){add.hidden=true;inp.hidden=false;inp.focus();return}
+ if(c===gym){var turn=!gym.classList.contains('on');items().forEach(function(x){x.classList.toggle('on',turn&&x===gym)})}
+ else{gym.classList.remove('on');c.classList.toggle('on')}
+ render()});
+inp.addEventListener('keydown',function(e){if(e.key!=='Enter')return;e.preventDefault();var v=inp.value.trim();
+ if(v){var b=document.createElement('button');b.type='button';b.className='chip on';b.textContent=v;box.insertBefore(b,add);gym.classList.remove('on')}
+ inp.value='';inp.hidden=true;add.hidden=false;render()});
+inp.addEventListener('blur',function(){if(!inp.value.trim()){inp.hidden=true;add.hidden=false}});
+if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+var ch=[].slice.call(g.querySelectorAll('.chip[data-k]'));
+function paint(){raf=0;if(touched)return;var r=g.getBoundingClientRect(),h=innerHeight,p=(h-r.top)/(h*0.6);p=Math.max(0,Math.min(1,p));
 ch.forEach(function(c){c.classList.toggle('on',p>=c.dataset.k*0.17)});sum.classList.toggle('on',p>=0.85)}
 function on(){if(!raf)raf=requestAnimationFrame(paint)}
 addEventListener('scroll',on,{passive:true});addEventListener('resize',on);paint()})();
@@ -184,7 +202,7 @@ function paint(){$('lo').textContent=f(S.lo);$('hi').textContent=f(S.hi);$('st')
  $('dbr').innerHTML='<bdi dir="ltr">'+f(S.lo)+'–'+f(S.hi)+'</bdi>';$('dbr').classList.remove('ask');
  const n=next();$('nx').textContent=n?f(n)+' ק״ג':'אין משקל כבד יותר';
  $('why').textContent=n?'המשקל הבא שאפשר באמת להרכיב: \u2066+'+f(n-LAST)+'\u2069 ק״ג.':'מיצית את הטווח. הצעד הבא: עוד חזרות, או תרגיל קשה יותר.'}
-$('db').onclick=()=>{$('ged').classList.add('on');$('hint').style.display='none';$('db').setAttribute('aria-expanded','true');paint()};
+const openR=e=>{e.stopPropagation();$('db').classList.add('on');window.__gearRender&&window.__gearRender();$('ged').classList.add('on');$('dbr').setAttribute('aria-expanded','true');paint()};$('dbr').onclick=openR;$('dbr').onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openR(e)}};
 document.querySelectorAll('.gst button').forEach(b=>b.onclick=()=>{const k=b.dataset.k,d=+b.dataset.d;
  if(k==='st'){S.st=STEPS[Math.max(0,Math.min(STEPS.length-1,STEPS.indexOf(S.st)+d))]}
  if(k==='lo'){S.lo=Math.max(1,Math.min(S.hi-S.st,S.lo+d))}
