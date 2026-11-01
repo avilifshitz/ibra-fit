@@ -1,0 +1,19 @@
+# IBRA
+
+Hebrew spelling and pronunciation: איברה (ee-BRA).
+
+> The problem IBRA solves: people train, sometimes for years and in different styles, and don't see real change in their body. Motivation was there; what was missing is someone who really knows them. In IBRA the user's own AI chat (ChatGPT, Claude or Gemini) builds a plan for their body (exercises, nutrition, sleep), and every week IBRA tells it what really happened (workouts, meals, sleep, and progress photos the user shares every 3 weeks) so it adjusts the plan. Works at home with limited equipment or in a gym; workouts of about 30–40 minutes.
+>
+> IBRA is an iOS app (Hebrew-first) that runs the workout and nutrition plan your own AI chat (ChatGPT, Claude or Gemini) wrote: a daily player for sets, rest and meals, body measurements and photos, and a weekly close that sends what really happened back to the chat for adjustments. No account, no server; data stays on the phone and in the user's iCloud. One free sample day without signing up. Pricing: a trial until the first weekly close (a Sunday at least four days after starting, so 4 to 10 days), then ₪199.90/year or ₪29.90/month, everything included; the AI chat is billed separately by its provider. Separately from price, the user gives "their word" (a goal, sessions per week, a weekly sign-off); two missed closes lead to renewing the word, with no fee and no data loss. Cancelling never locks data.
+
+- Home (Hebrew): https://ibra.fit/
+- Home (English): https://ibra.fit/en/
+- Guide (Hebrew): how to run a ChatGPT workout plan, what to ask, what to send back weekly: https://ibra.fit/chatgpt-workout-plan
+- How it works (Hebrew), 12 steps with real screens: https://ibra.fit/how-it-works
+- Ranks (Hebrew): the three ranks and their five measured conditions, thresholds as in the app: https://ibra.fit/ranks
+- Home gym (Hebrew): a plan for the equipment you already own: https://ibra.fit/home-gym
+- The IBRA way (Hebrew), brand philosophy: https://ibra.fit/way · Founder: https://ibra.fit/founder
+- FAQ: https://ibra.fit/faq
+- Compared with a personal trainer and nutritionist, AI coach apps, Hevy/Strong and ChatGPT alone: https://ibra.fit/vs
+- App Store: https://apps.apple.com/il/app/ibra/id6794155896
+- Privacy: https://ibra.fit/privacy · Terms: https://ibra.fit/terms · Support: https://ibra.fit/support
