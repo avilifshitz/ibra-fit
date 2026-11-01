@@ -1195,3 +1195,11 @@ bdi[dir="ltr"]{white-space:nowrap}
 #coachshot .cs-fs{display:grid}#coachshot .cs-fs>.cs-f{grid-area:1/1}
 #coachshot.m2 .f1{opacity:0}
 .mo.cam img.sil{height:108px;width:auto;border:0;border-radius:0;box-shadow:none;max-width:none}
+#coachshot .cs-card+.cs-card{margin-top:1.4cqw}#coachshot .cs-f .cs-card{padding:2.6cqw 4cqw}
+#coachshot .cs-photo{height:44cqw}
+#coachshot .cs-rx-box{margin-top:1.5cqw;border-radius:4cqw;background:#141416;overflow:hidden}
+#coachshot .cs-rx-box .rx{display:flex;align-items:flex-start;gap:3cqw;padding:2.8cqw 4cqw}
+#coachshot .cs-rx-box .rx+.rx{border-top:1px solid #232326}
+#coachshot .cs-rx-box .ick{width:4.4cqw;height:4.4cqw;flex:none;margin-top:.8cqw;transform:skewX(-8deg)}
+#coachshot .cs-rx-box .ick path{fill:none;stroke:#fff;stroke-width:2.6;stroke-linecap:square;stroke-linejoin:miter}
+#coachshot .cs-rx-box b{display:block;font-size:4.6cqw;font-weight:800}#coachshot .cs-rx-box span{display:block;margin-top:.5cqw;font-size:3.8cqw;color:rgba(255,255,255,.6)}
