@@ -1206,7 +1206,7 @@ bdi[dir="ltr"]{white-space:nowrap}
 .gearcard .chip.addin{width:150px;background:#232327;border-color:#fff;color:#fff;font:inherit;font-weight:800;font-size:17px;outline:none}
 .gearcard #dbr{cursor:pointer}
 .gearcard .chip[hidden]{display:none}
-.hero .kick{color:var(--muted);font-size:18px;font-weight:700;margin:0 0 12px}
-@media (max-width:720px){.hero .kick{font-size:16px;margin:20px 0 8px}}
+.hero .kick{color:var(--ink);font-size:24px;font-weight:800;margin:0 0 12px}
+@media (max-width:720px){.hero .kick{font-size:20px;margin:20px 0 10px}}
 #price .plans .vsone{margin-top:8px}
 .src{font-size:13px}
