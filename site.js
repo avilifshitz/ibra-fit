@@ -226,3 +226,6 @@ function on(){if(!raf)raf=requestAnimationFrame(paint)}addEventListener('scroll'
 function show(k){[].forEach.call(ph.querySelectorAll('.rk-body'),function(b){b.classList.toggle('on',b.dataset.r===k)});[].forEach.call(ph.querySelectorAll('.rk-g'),function(g){g.classList.toggle('sel',g.dataset.r===k)});L.forEach(function(li,i){li.classList.toggle('on',keys[i]===k);li.setAttribute('aria-selected',keys[i]===k)})}
 L.forEach(function(li,i){li.addEventListener('click',function(){show(keys[i])});li.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();show(keys[i])}})});
 [].forEach.call(ph.querySelectorAll('.rk-g'),function(g){g.addEventListener('click',function(){show(g.dataset.r)})})})();
+
+// המאמן ראה, בהירו: הסימון ⇒ הממצא ⇒ השורות בתוכנית, בלולאה
+(function(){var c=document.getElementById('coachshot');if(!c||matchMedia('(prefers-reduced-motion: reduce)').matches){c&&['m1','f1','m2','f2'].forEach(function(k){c.classList.add(k)});return}var T=[[600,'m1'],[1400,'f1'],[3600,'m2'],[4400,'f2']];function run(){['m1','f1','m2','f2'].forEach(function(k){c.classList.remove(k)});T.forEach(function(t){setTimeout(function(){c.classList.add(t[1])},t[0])});setTimeout(run,9000)}run()})();
