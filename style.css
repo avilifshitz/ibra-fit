@@ -1266,7 +1266,7 @@ bdi[dir="ltr"]{white-space:nowrap}
 .wk{margin:22px 0 0;font-size:30px;font-weight:900;font-style:italic;color:var(--ink);line-height:1.1}
 .wk b{color:#E8FF3C}
 .wk small{display:block;font-size:14px;font-style:normal;font-weight:600;color:var(--muted);margin-top:4px}
-.proof3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:14px 0 0}
+.proof3{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:14px 0 0}
 .proof3 span{flex:1;display:flex;flex-direction:column;gap:2px;padding:10px 12px;border:1px solid rgba(232,255,60,.35);border-radius:12px;background:rgba(232,255,60,.06);font-size:13px;color:var(--ink2)}
 .proof3 b i{font-size:15px;font-style:normal;font-weight:800}
 .proof3 b{white-space:nowrap;color:#E8FF3C;font-size:24px;font-weight:900;font-style:italic;line-height:1}
@@ -1293,3 +1293,4 @@ bdi[dir="ltr"]{white-space:nowrap}
 .tline{text-align:center;font-size:18px;color:var(--ink2);line-height:1.5}
 .tline b{display:block;font-size:22px;font-weight:900;color:var(--ink)}
 .tline em{font-style:normal;font-weight:900;color:#E8FF3C}
+@media (max-width:720px){.proof3{grid-template-columns:1fr 1fr}}
