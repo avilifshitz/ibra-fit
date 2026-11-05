@@ -1294,3 +1294,34 @@ bdi[dir="ltr"]{white-space:nowrap}
 .tline b{display:block;font-size:22px;font-weight:900;color:var(--ink)}
 .tline em{font-style:normal;font-weight:900;color:#E8FF3C}
 @media (max-width:720px){.proof3{grid-template-columns:1fr 1fr}}
+
+/* ---- סעיף 3 · "לא רק משקולות" — מסע המיומנויות (5.11) ---- */
+#skills{margin-top:80px}
+#skills h3{font-size:40px;font-weight:900;font-style:italic;line-height:1.08}
+#skills h3 em{color:var(--lime);font-style:italic}
+#skills .lede{color:var(--ink2);font-size:17px;margin-top:14px;max-width:60ch}
+#skills .k{font-size:13px;font-weight:800;letter-spacing:.06em;color:var(--muted);margin-top:48px}
+#skills .path{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;margin-top:14px}
+#skills .path svg{display:block;width:100%;height:auto;margin-bottom:12px}
+#skills .rail{position:relative;height:18px;margin:4px 0 10px}
+#skills .rail:before{content:"";position:absolute;inset:8px 12% auto 12%;height:1px;background:linear-gradient(to left,rgba(255,255,255,.18),rgba(232,255,60,.7))}
+#skills .rail i{position:absolute;top:4px;width:9px;height:9px;border-radius:50%;background:#3a3a40;transform:translateX(50%)}
+#skills .rail i.g{background:var(--lime);box-shadow:0 0 12px rgba(232,255,60,.6)}
+#skills .st{text-align:center}
+#skills .st small{display:block;font-size:13px;color:var(--muted)}
+#skills .st b{display:block;font-size:16px;font-weight:800;margin-top:1px}
+#skills .st.goal small{color:var(--lime)}
+#skills .others{margin-top:44px;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+#skills .others span{border:1px solid var(--line);border-radius:999px;padding:7px 14px;font-size:14px;font-weight:700;color:var(--ink2)}
+#skills .others p{flex-basis:100%;color:var(--muted);font-size:15px;margin-top:10px}
+#skills .others a{color:var(--lime);font-weight:700;white-space:nowrap}
+@media (max-width:760px){
+  #skills{margin-top:48px}
+  #skills h3{font-size:30px}
+  #skills .path{grid-template-columns:1fr;gap:0}
+  #skills .path svg{margin-bottom:0}
+  #skills .rail{display:none}
+  #skills .st{display:grid;grid-template-columns:140px minmax(0,1fr);align-items:center;gap:14px;text-align:right;padding:6px 16px 6px 0;border-right:1px solid var(--line);position:relative}
+  #skills .st:before{content:"";position:absolute;right:-5px;top:50%;width:9px;height:9px;border-radius:50%;background:#3a3a40}
+  #skills .st.goal:before{background:var(--lime);box-shadow:0 0 12px rgba(232,255,60,.6)}
+}
