@@ -1,3 +1,4 @@
+var EN=document.documentElement.lang==='en';
 // Google Play: מתג אחד — data-play על <html> עם קישור-הרשומה; ריק ⇒ התגים מוסתרים
 (function(){var u=document.documentElement.getAttribute("data-play");if(!u)return;[].forEach.call(document.querySelectorAll(".badge.play"),function(a){a.href=u;a.hidden=false})})();
 // ibra.fit — תנועה בלבד. הטקסט נראה גם בלי הקובץ הזה.
@@ -95,13 +96,13 @@ function draw(kg,d,final){var n=kg.length,lo=Math.min.apply(null,kg)-1.5,hi=Math
  el.fill.setAttribute('d',path(kg,0,n-1,lo,hi)+'L'+X1+' '+BOT+'L'+X0+' '+BOT+'Z');
  var g=pt(kg,n-1,lo,hi),t=pt(kg,0,lo,hi);el.goal.setAttribute('cx',g.x);el.goal.setAttribute('cy',g.y);el.today.setAttribute('cy',t.y);el.halo.setAttribute('cy',t.y);
  if(d.estFrom!=null){var s=pt(kg,ef,lo,hi);el.split.style.opacity=1;el.split.setAttribute('x1',s.x);el.split.setAttribute('x2',s.x);el.split.setAttribute('y1',s.y+7)}else el.split.style.opacity=0;
- var pk=kg.indexOf(Math.max.apply(null,kg)),pp=pt(kg,pk,lo,hi);el.peak.style.left=Math.max(0,pp.x/W*100-6)+'%';el.peak.style.top=Math.max(0,pp.y/150*100-12)+'%';
+ var pk=kg.indexOf(Math.max.apply(null,kg)),pp=pt(kg,pk,lo,hi);el.peak.style.left=Math.max(0,(EN?W-pp.x:pp.x)/W*100-6)+'%';el.peak.style.top=Math.max(0,pp.y/150*100-12)+'%';
  if(final){var ex=extrema(kg),cs=el.dots.children;for(var i=0;i<cs.length;i++){var c=cs[i];if(i<ex.length){var p=pt(kg,ex[i],lo,hi);c.setAttribute('cx',p.x);c.setAttribute('cy',p.y);c.classList.toggle('e',ex[i]>=ef);c.style.opacity=1}else c.style.opacity=0}}
  else{var cs2=el.dots.children;for(var k=0;k<cs2.length;k++)cs2[k].style.opacity=0}}
 var cur=null,raf=null;
 function tween(e,from,to,ms){var t0=null;function f(ts){if(!t0)t0=ts;var p=Math.min(1,(ts-t0)/ms);p=1-Math.pow(1-p,3);e.textContent=Math.round(from+(to-from)*p);if(p<1)requestAnimationFrame(f)}requestAnimationFrame(f);setTimeout(function(){e.textContent=to},ms+80)}
-function apply(d){el.peak.querySelector('b').textContent=d.peak;['y1','y2','y3'].forEach(function(c,k){ph.querySelector('.years .'+c).style.right=(d.years[k]*100)+'%'});el.esl.style.opacity=d.est?1:0;
- el.gk.textContent=d.gk;el.gy.textContent=d.gy;el.door.textContent=d.door;if(d.ms){var mx=X0-(X0-X1)*d.ms.at;var ml=ph.querySelector('line.ms');ml.setAttribute('x1',mx);ml.setAttribute('x2',mx);var lb=ph.querySelector('.lbl.ms');lb.style.left=(mx/W*100)+'%';lb.querySelector('b').textContent=d.ms.m;ph.querySelector('[data-ms]').textContent=d.ms.t}
+function apply(d){el.peak.querySelector('b').textContent=d.peak;['y1','y2','y3'].forEach(function(c,k){ph.querySelector('.years .'+c).style[EN?'left':'right']=(d.years[k]*100)+'%'});el.esl.style.opacity=d.est?1:0;
+ el.gk.textContent=d.gk;el.gy.textContent=d.gy;el.door.textContent=d.door;if(d.ms){var mx=X0-(X0-X1)*d.ms.at;var ml=ph.querySelector('line.ms');ml.setAttribute('x1',mx);ml.setAttribute('x2',mx);var lb=ph.querySelector('.lbl.ms');lb.style.left=((EN?W-mx:mx)/W*100)+'%';lb.querySelector('b').textContent=d.ms.m;ph.querySelector('[data-ms]').textContent=d.ms.t}
  if(!cur||reduced){el.gw.textContent=d.gw;el.gf.textContent=d.gf;draw(d.kg,d,true);cur=d;return}
  tween(el.gw,cur.gw,d.gw,700);tween(el.gf,cur.gf,d.gf,700);
  var from=cur.kg,to=d.kg,t0=null;if(raf)cancelAnimationFrame(raf);
@@ -123,7 +124,7 @@ var M=ml?{g2:ml.querySelector('[data-g2]'),kc:ml.querySelector('[data-kcal]'),pr
 function live(i,v){var f=V&&V.fr[i];if(!f)return;if(v&&!f.src){f.src=f.getAttribute('data-src')}if(!v&&f.src){f.removeAttribute('src')}f.classList.toggle('live',v)}
 window.__setMoment=function(p){
  // שלב 2 · מסך-היום: החפיסה מחליקה (ב-RTL הקלפים הבאים משמאל ⇒ הרצועה זזה ימינה)
- var t=seg(p*5,0.7,1.6),ts=seg(t,0.12,0.5);ts=ts*ts*(3-2*ts);if(deck)deck.style.transform='translateX('+(ts*92).toFixed(1)+'cqw)';var td=document.getElementById('todayshot');if(td){on(td.querySelector('.tring'),'hit',t>=0.54&&t<0.66);on(td,'sheet',t>=0.66)}
+ var t=seg(p*5,0.7,1.6),ts=seg(t,0.12,0.5);ts=ts*ts*(3-2*ts);if(deck)deck.style.transform='translateX('+(ts*(EN?-92:92)).toFixed(1)+'cqw)';var td=document.getElementById('todayshot');if(td){on(td.querySelector('.tring'),'hit',t>=0.54&&t<0.66);on(td,'sheet',t>=0.66)}
  // שלב 2 · 0.125–0.375
  var u=p*5;var q=seg(u,2.7,3.6);
  if(L){on(L.rest,'on',q<0.3);on(L.set,'on',q>=0.3&&q<0.82);on(L.earn,'on',q>=0.82);
@@ -172,9 +173,9 @@ window.__stepper=window.__steppers.how})();
 var box=g.querySelector('#gchips'),sum=g.querySelector('#gsum'),gym=box.querySelector('[data-gym]'),add=g.querySelector('#gadd'),inp=g.querySelector('#gin'),touched=false,raf=0;
 function items(){return [].slice.call(box.querySelectorAll('.chip:not(.add):not(.addin)'))}
 function render(){var on=items().filter(function(c){return c.classList.contains('on')});
- if(gym.classList.contains('on'))sum.innerHTML='חדר כושר מאובזר. <em>יש שם הכל.</em>';
- else if(!on.length)sum.textContent='סמן לפחות פריט אחד, או חדר כושר.';
- else sum.innerHTML=on.length+(on.length===1?' פריט':' פריטים')+'. <em>'+(on.length>=3?'מספיק לתוכנית מלאה.':'המאמן בונה לזה.')+'</em>';
+ if(gym.classList.contains('on'))sum.innerHTML=EN?'Full gym. <em>It has everything.</em>':'חדר כושר מאובזר. <em>יש שם הכל.</em>';
+ else if(!on.length)sum.textContent=EN?'Pick at least one item, or a full gym.':'סמן לפחות פריט אחד, או חדר כושר.';
+ else sum.innerHTML=EN?on.length+(on.length===1?' item':' items')+'. <em>'+(on.length>=3?'Enough for a full plan.':'IBRA builds for that.')+'</em>':on.length+(on.length===1?' פריט':' פריטים')+'. <em>'+(on.length>=3?'מספיק לתוכנית מלאה.':'המאמן בונה לזה.')+'</em>';
  sum.classList.add('on')}
 window.__gearRender=function(){touched=true;gym.classList.remove('on');render()};
 box.addEventListener('click',function(e){var c=e.target.closest('.chip');if(!c||c===inp)return;if(e.target.closest('#dbr'))return;
@@ -200,8 +201,8 @@ const $=id=>document.getElementById(id),f=n=>(+n.toFixed(2)).toString();
 function next(){for(let w=S.lo;w<=S.hi+1e-9;w+=S.st){if(w>LAST+1e-9)return w}return null}
 function paint(){$('lo').textContent=f(S.lo);$('hi').textContent=f(S.hi);$('st').textContent=f(S.st);
  $('dbr').innerHTML='<bdi dir="ltr">'+f(S.lo)+'–'+f(S.hi)+'</bdi>';$('dbr').classList.remove('ask');
- const n=next();$('nx').textContent=n?f(n)+' ק״ג':'אין משקל כבד יותר';
- $('why').textContent=n?'המשקל הבא שאפשר באמת להרכיב: \u2066+'+f(n-LAST)+'\u2069 ק״ג.':'מיצית את הטווח. הצעד הבא: עוד חזרות, או תרגיל קשה יותר.'}
+ const n=next();$('nx').textContent=n?f(n)+(EN?' kg':' ק״ג'):(EN?'No heavier weight':'אין משקל כבד יותר');
+ $('why').textContent=EN?(n?'The next weight you can actually load: +'+f(n-LAST)+' kg.':'You have maxed the range. Next: more reps, or a harder exercise.'):(n?'המשקל הבא שאפשר באמת להרכיב: \u2066+'+f(n-LAST)+'\u2069 ק״ג.':'מיצית את הטווח. הצעד הבא: עוד חזרות, או תרגיל קשה יותר.')}
 const openR=e=>{e.stopPropagation();$('db').classList.add('on');window.__gearRender&&window.__gearRender();$('ged').classList.add('on');$('dbr').setAttribute('aria-expanded','true');paint()};$('dbr').onclick=openR;$('dbr').onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openR(e)}};
 document.querySelectorAll('.gst button').forEach(b=>b.onclick=()=>{const k=b.dataset.k,d=+b.dataset.d;
  if(k==='st'){S.st=STEPS[Math.max(0,Math.min(STEPS.length-1,STEPS.indexOf(S.st)+d))]}

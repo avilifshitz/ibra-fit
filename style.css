@@ -1325,3 +1325,34 @@ bdi[dir="ltr"]{white-space:nowrap}
   #skills .st:before{content:"";position:absolute;right:-5px;top:50%;width:9px;height:9px;border-radius:50%;background:#3a3a40}
   #skills .st.goal:before{background:var(--lime);box-shadow:0 0 12px rgba(232,255,60,.6)}
 }
+
+/* ===== English (LTR) — /en/. Every rule scoped to [dir=ltr]; the Hebrew site is untouched. ===== */
+.site .lang,main .lang{font-size:14px;font-weight:700;color:var(--muted);padding:12px 4px}
+.site .lang:hover,main .lang:hover{color:var(--ink)}
+.site .text>nav .lang{margin-inline-start:auto;margin-inline-end:12px}
+.shotnote{font-size:13px;color:var(--muted);margin-top:16px}
+.rkmean{font-size:14px;color:var(--muted);margin-top:12px}
+/* mocks: built RTL, text LTR */
+[dir=ltr] .hs,[dir=ltr] .ws,[dir=ltr] .phone,[dir=ltr] .hcoach .hs,[dir=ltr] .rcard .lbl,[dir=ltr] .hs .dc b,[dir=ltr] .stepper .track>.hs,[dir=ltr] .scene .track>.hs,[dir=ltr] .scene.coach .hs{direction:ltr}
+/* sliding tracks keep their RTL geometry (positive translate = next); the slides inside are LTR */
+[dir=ltr] .stepper .pin,[dir=ltr] .scene .pin,[dir=ltr] .stepper .track,[dir=ltr] .scene .track{direction:rtl}
+[dir=ltr] .hs .eye,[dir=ltr] .hs .ttl,[dir=ltr] .hs .thero{text-align:left}
+[dir=ltr] .hs .prev{float:right}
+[dir=ltr] .scene .bars i::after,[dir=ltr] .stepper .tabs .bar,[dir=ltr] .stepper .list .bar{transform-origin:left}
+[dir=ltr] .text th,[dir=ltr] .text td{text-align:left}
+[dir=ltr] #coachshot .cs-chip{right:auto;left:3cqw}
+/* "where and when": time runs left → right */
+[dir=ltr] .rcard svg{transform:scaleX(-1)}
+[dir=ltr] .rcard .lbl.today{right:auto;left:0}
+[dir=ltr] .rcard .years span{transform:translateX(-50%);transition:left .8s,opacity .4s}
+[dir=ltr] .rcard .years .esl{left:auto;right:4px;transform:none}
+/* skills path */
+[dir=ltr] #skills .rail:before{background:linear-gradient(to right,rgba(255,255,255,.18),rgba(232,255,60,.7))}
+[dir=ltr] #skills .rail i{transform:translateX(-50%)}
+[dir=ltr] .w5 .wt{left:auto;right:9cqw}
+@media (max-width:760px){[dir=ltr] #skills .st{text-align:left;padding:6px 0 6px 16px;border-right:0;border-left:1px solid var(--line)}[dir=ltr] #skills .st:before{right:auto;left:-5px}}
+[dir=ltr] .text article ol,[dir=ltr] .text article ul{margin:10px 0 0 20px}
+[dir=ltr] .text table:not(.ct) th,[dir=ltr] .text table:not(.ct) td{padding-right:14px}
+[dir=ltr] .saw .plan{border-right:0;padding-right:0;border-left:2px solid var(--line);padding-left:10px}
+.text p.sig{display:block;max-width:none}
+.lhead{display:flex;justify-content:space-between;align-items:baseline}main .lhead .lang{color:var(--muted);text-decoration:none}

@@ -7,7 +7,8 @@ Hebrew spelling and pronunciation: איברה (ee-BRA).
 > IBRA is an iOS app (Hebrew-first): a daily player for sets, rest and meals, body measurements and photos, and a weekly close that progresses the plan (and, in Pro, sends what really happened to the chat for adjustments). No account, no server; data stays on the phone and in the user's iCloud. One free sample day without signing up. Pricing: the core app is free with no AI required (IBRA builds the first plan from your equipment and goal, runs it and progresses it at each weekly close). IBRA Pro connects your own AI chat as a coach, plus photo analysis, body fat, posture, charts and the Apple Watch app: ₪249.90/year or ₪49.90/month; the first close with the coach is free. The AI chat is billed separately by its provider. Separately from price, the user gives "their word" (a goal, sessions per week, a weekly sign-off); two missed closes lead to renewing the word, with no fee and no data loss. Cancelling never locks data.
 
 - Home (Hebrew): https://ibra.fit/
-- Home (English): https://ibra.fit/en/
+- English site (all pages, under /en/): https://ibra.fit/en/ · how it works https://ibra.fit/en/how-it-works · ranks https://ibra.fit/en/ranks · FAQ https://ibra.fit/en/faq · compare https://ibra.fit/en/vs · ChatGPT guide https://ibra.fit/en/chatgpt-workout-plan
+- English pricing: free; IBRA Pro $12.99/month or $69.99/year (Apple converts to local currency).
 - Guide (Hebrew): how to run a ChatGPT workout plan, what to ask, what to send back weekly: https://ibra.fit/chatgpt-workout-plan
 - How it works (Hebrew), 10 steps with real screens: https://ibra.fit/how-it-works
 - Ranks (Hebrew): the three ranks and their five measured conditions, thresholds as in the app: https://ibra.fit/ranks
