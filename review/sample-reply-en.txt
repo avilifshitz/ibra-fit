@@ -1,0 +1,269 @@
+Here is your plan.
+
+```json
+{
+  "version": "ibra_plan_v1",
+  "meta": {
+    "athlete": "Avi",
+    "nickname": "champ",
+    "mission": "CUT",
+    "week_count": 12,
+    "current_week": 5,
+    "deload_weeks": [4, 8],
+    "hiit": { "style": "sprints" },
+    "time_promise": "On this time budget you'll hit 1.45 by week 12 — no extra workouts.",
+    "method": {
+      "name": "70/30 Heavy Classic",
+      "core_mix": [
+        { "part": "Weights", "pct": 70 },
+        { "part": "Mobility/Calisthenics", "pct": 30 }
+      ],
+      "cardio": "Zone 2 walks ×3 a week + one HIIT",
+      "style": ["Heavy, low reps on the main lifts", "Supersets to save time", "Core every workout"]
+    },
+    "weekly_targets": [
+      { "kind": "workouts_closed", "target": 4, "enough": 3 },
+      { "kind": "meals_in_window", "target": 18 },
+      { "kind": "top_set", "exercise": "Back Squat — Barbell (Pyramid)", "target_kg": 62.5 },
+      { "kind": "walks", "target": 3 }
+    ]
+  },
+  "goals": {
+    "weight_kg": 70.5,
+    "waist_cm": 86.5,
+    "adonis": 1.45,
+    "custom": ["VO2 Max 44+"]
+  },
+  "schedule": [
+    { "day": "sun", "workout_id": "push_a", "cardio": { "type": "HIIT", "duration_min": 20, "hr_zone": "148-165", "timing": "Evening", "detail": null }, "blocks": [] },
+    { "day": "mon", "workout_id": "pull_a", "cardio": { "type": "LISS", "duration_min": 45, "hr_zone": "105-115", "timing": "Evening", "detail": "30-45 min" }, "blocks": [] },
+    { "day": "tue", "workout_id": "legs_a", "cardio": { "type": "Easy walk", "duration_min": 30, "hr_zone": "100-115", "timing": null, "detail": null }, "blocks": [] },
+    { "day": "wed", "workout_id": "push_b", "cardio": { "type": "HIIT", "duration_min": 20, "hr_zone": "148-165", "timing": "Evening", "detail": null }, "blocks": [] },
+    { "day": "thu", "workout_id": "pull_b", "cardio": { "type": "Zone 2", "duration_min": 40, "hr_zone": "130-140", "timing": null, "detail": "30-40 min" }, "blocks": [] },
+    { "day": "fri", "workout_id": "legs_b", "cardio": { "type": "Easy walk", "duration_min": 30, "hr_zone": "100-115", "timing": null, "detail": null }, "blocks": [] },
+    { "day": "sat", "workout_id": null, "cardio": { "type": "Long LISS", "duration_min": 60, "hr_zone": "105-120", "timing": null, "detail": "50-60 min" }, "blocks": [] }
+  ],
+  "workouts": [
+    {
+      "id": "push_a",
+      "name": "PUSH A",
+      "color": "#C0392B",
+      "focus": "Chest · Shoulders · Triceps",
+      "duration_min": 42,
+      "exercises": [
+        { "name": "Incline Bench Press 30° — Barbell", "sets": 4, "reps": "6-8", "rest_sec": 90, "ramp_up": 2, "rpe": 8, "tempo": "3:1:2", "cue": "3-sec descent. Squeeze the shoulder blades.", "adonis_level": 1, "superset_group": null, "youtube_query": "incline barbell bench press form" },
+        { "name": "Flat Bench Press — Dumbbells", "sets": 3, "reps": "10-12", "rest_sec": 0, "rpe": 8, "tempo": "2:1:2", "cue": "Superset. Elbows at 45°.", "adonis_level": 0, "superset_group": "2A", "youtube_query": "flat dumbbell bench press form" },
+        { "name": "Incline Fly 30°", "sets": 3, "reps": "12-15", "rest_sec": 75, "rpe": 9, "tempo": "3:1:2", "cue": "Superset. Full stretch.", "adonis_level": 0, "superset_group": "2B", "youtube_query": "incline dumbbell fly form" },
+        { "name": "Seated Shoulder Press", "sets": 3, "reps": "12/10/8", "rest_sec": 90, "rpe": 8, "tempo": "2:0:2", "cue": "Lower to ear height.", "adonis_level": 1, "superset_group": null, "setup": { "position": "seated", "arms": "both" }, "youtube_query": "seated dumbbell shoulder press form" },
+        { "name": "Lateral Raise — Dumbbells", "sets": 4, "reps": "15", "rest_sec": 0, "rpe": 9, "tempo": "2:2:1", "cue": "ADONIS KEY! Hold 2 sec at the top.", "adonis_level": 3, "superset_group": "4A", "setup": { "position": "standing", "arms": "both" }, "youtube_query": "dumbbell lateral raise form" },
+        { "name": "Overhead Triceps Extension", "sets": 3, "reps": "10-12", "rest_sec": 75, "rpe": 8, "tempo": "2:1:2", "cue": "Superset. Elbows tight.", "adonis_level": 0, "superset_group": "4B", "setup": { "position": "seated", "arms": "both" }, "youtube_query": "overhead triceps extension form" }
+      ],
+      "finisher": "LATERAL RAISE PUMP: 3×20 light, 30 sec rest",
+      "mobility": [
+        { "name": "Doorway Chest Stretch", "seconds": 60, "how_to": "Stand in a doorway, forearm and elbow on the frame at shoulder height. Take a small step forward until you feel it in the chest and front shoulder. Ribs down, don't arch your lower back. Switch sides.", "youtube_query": "doorway chest stretch" },
+        { "name": "Cross-Body Shoulder Stretch (each side)", "seconds": 30, "how_to": "Bring one straight arm across your chest and hold it above the elbow with the other hand. Pull gently toward your chest, shoulder down and away from your ear. Switch sides.", "youtube_query": "cross body shoulder stretch" },
+        { "name": "Thoracic Rotation (each side)", "seconds": 30, "how_to": "On all fours, one hand behind your head. Bring the elbow toward the supporting hand, then open it to the ceiling by rotating through the mid-back, eyes following. Hips stay still — the turn comes from the chest only. Switch sides.", "youtube_query": "quadruped thoracic rotation" },
+        { "name": "Sleeper Stretch (each side)", "seconds": 30, "how_to": "Lie on your side, bottom shoulder under you, elbow bent to 90°. With the top hand, gently press the bottom palm toward the floor. Stop when you feel a stretch in the back of the shoulder — no pain. Switch sides.", "youtube_query": "sleeper stretch shoulder" }
+      ]
+    },
+    {
+      "id": "pull_a",
+      "name": "PULL A",
+      "color": "#2E5A9C",
+      "focus": "Wide back · V-Taper · Biceps",
+      "duration_min": 42,
+      "exercises": [
+        { "name": "Extra-Wide Pull-Up", "sets": 4, "reps": "6-8", "rest_sec": 120, "rpe": 8, "tempo": "2:1:3", "cue": "ADONIS! 3-sec descent. Wide back = narrow waist.", "adonis_level": 2, "superset_group": null, "youtube_query": "wide grip pull up form" },
+        { "name": "Barbell Row", "sets": 3, "reps": "8-10", "rest_sec": 0, "ramp_up": 2, "rpe": 8, "tempo": "2:1:2", "cue": "Superset. Flat back at 45°.", "adonis_level": 0, "superset_group": "2A", "youtube_query": "barbell bent over row form" },
+        { "name": "Reverse Flys 60°", "sets": 3, "reps": "15", "rest_sec": 75, "rpe": 9, "tempo": "2:1:2", "cue": "Superset. Rear delts.", "adonis_level": 1, "superset_group": "2B", "youtube_query": "incline reverse fly form" },
+        { "name": "Single-Arm Dumbbell Row", "sets": 3, "reps": "10-12", "rest_sec": 90, "rpe": 8, "tempo": "2:1:2", "cue": "Heavy! Squeeze at the top.", "adonis_level": 0, "superset_group": null, "youtube_query": "single arm dumbbell row form" },
+        { "name": "Pullover — Dumbbell", "sets": 3, "reps": "12", "rest_sec": 75, "rpe": 8, "tempo": "3:1:2", "cue": "ADONIS! Full stretch = V-Taper.", "adonis_level": 1, "superset_group": null, "youtube_query": "dumbbell pullover form" },
+        { "name": "Seated Dumbbell Curl", "sets": 3, "reps": "10-12", "rest_sec": 60, "rpe": 8, "tempo": "2:1:2", "cue": "Supinate at the top.", "adonis_level": 0, "superset_group": null, "setup": { "position": "seated", "arms": "alternating" }, "youtube_query": "seated dumbbell bicep curl form" }
+      ],
+      "finisher": "ARM SUPERSET: Barbell Curl 12 → Hammer Curl 12, ×2 · Face Pulls 3×20",
+      "mobility": [
+        { "name": "Lat Stretch (each side)", "seconds": 45, "how_to": "Grab a bar or doorframe at head height, step back and hinge at the hips until the arm is straight. Sink your chest toward the floor and let your hips drift away from the hand — you'll feel it along the side of your back, under the armpit. Switch sides.", "youtube_query": "lat stretch" },
+        { "name": "Child's Pose", "seconds": 60, "how_to": "Kneel with knees slightly apart, sit back on your heels and rest your chest between your thighs. Arms straight out on the floor, forehead down. Breathe into your back — every exhale pushes your hips closer to your heels.", "youtube_query": "child's pose stretch" },
+        { "name": "Doorway Chest Stretch", "seconds": 45, "how_to": "Stand in a doorway, forearm and elbow on the frame at shoulder height. Take a small step forward until you feel it in the chest and front shoulder. Ribs down, don't arch your lower back. Switch sides.", "youtube_query": "doorway chest stretch" },
+        { "name": "Hip Flexor (each side)", "seconds": 30, "how_to": "Kneel on one knee, other foot forward at 90°. Squeeze the glute of the back leg and push your hips forward — don't arch your lower back. You'll feel it in the front of the kneeling hip. Switch sides.", "youtube_query": "kneeling hip flexor stretch" }
+      ]
+    },
+    {
+      "id": "legs_a",
+      "name": "LEGS A",
+      "color": "#3D7A3D",
+      "focus": "Squat · Lunges · Core",
+      "duration_min": 42,
+      "exercises": [
+        { "name": "Back Squat — Barbell (Pyramid)", "sets": 4, "reps": "6-8", "rest_sec": 120, "ramp_up": 2, "rpe": 8, "tempo": "2:1:3", "cue": "Pyramid: 15→10→7→6.", "adonis_level": 0, "superset_group": null, "youtube_query": "barbell back squat form" },
+        { "name": "Bulgarian Split Squat", "sets": 4, "reps": "8-10/leg", "rest_sec": 90, "rpe": 9, "tempo": "2:1:2", "cue": "King of leg day. Full depth.", "adonis_level": 0, "superset_group": null, "youtube_query": "bulgarian split squat form" },
+        { "name": "Walking Lunges", "sets": 3, "reps": "12/leg", "rest_sec": 75, "rpe": 8, "tempo": "2:1:2", "cue": "Chest up.", "adonis_level": 0, "superset_group": null, "youtube_query": "walking lunge form" },
+        { "name": "Calf Raise", "sets": 4, "reps": "20-25", "rest_sec": 60, "rpe": 9, "tempo": "1:2:1", "cue": "HOLD 2 sec at the top.", "adonis_level": 0, "superset_group": null, "youtube_query": "standing calf raise form" }
+      ],
+      "finisher": "Core: Weighted Crunch 3×15 → Hanging Leg Raises 3×12 → Russian Twists ×20/side",
+      "mobility": [
+        { "name": "Hip Flexor Lunge (each side)", "seconds": 60, "how_to": "Long lunge, back knee on the floor. Hips forward, glute squeezed, chest up. To go deeper, raise the arm on the back-leg side to the ceiling. Switch sides.", "youtube_query": "hip flexor lunge stretch" },
+        { "name": "Hamstring Stretch (each side)", "seconds": 45, "how_to": "Stand with one heel on a low surface (step or bench), leg straight. Long back, hinge at the hips toward the leg and exhale. Pulling your toes toward you deepens the stretch. Switch sides.", "youtube_query": "standing hamstring stretch" },
+        { "name": "Pigeon Pose (each side)", "seconds": 45, "how_to": "From all fours, bring one knee forward toward the same-side hand, shin angled forward. Back leg straight behind you, hips square to the floor. Fold forward over the front leg and breathe. If the knee complains, prop your hip on a towel. Switch sides.", "youtube_query": "pigeon pose hip stretch" },
+        { "name": "Deep Squat Hold", "seconds": 45, "how_to": "Feet a bit wider than shoulders, sink into a deep squat with heels down. Elbows push the knees out, chest up. If your heels lift, put a thin plate under them. Breathe and let your hips sink.", "youtube_query": "deep squat hold mobility" }
+      ]
+    },
+    {
+      "id": "push_b",
+      "name": "PUSH B",
+      "color": "#C0392B",
+      "focus": "Shoulder specialization",
+      "duration_min": 42,
+      "exercises": [
+        { "name": "Standing Overhead Press — Barbell (OHP)", "sets": 4, "reps": "5-6", "rest_sec": 120, "ramp_up": 2, "rpe": 8, "tempo": "2:1:2", "cue": "Heavy! Brace your core.", "adonis_level": 1, "superset_group": null, "youtube_query": "standing barbell overhead press form" },
+        { "name": "Arnold Press — Dumbbells", "sets": 3, "reps": "10-12", "rest_sec": 0, "rpe": 8, "tempo": "2:0:2", "cue": "Superset. Hits every head of the delt.", "adonis_level": 2, "superset_group": "2A", "setup": { "position": "seated" }, "youtube_query": "arnold press form" },
+        { "name": "Lateral Raise", "sets": 3, "reps": "15-20", "rest_sec": 75, "rpe": 9, "tempo": "2:2:1", "cue": "ADONIS CRITICAL! Hold 2 sec.", "adonis_level": 3, "superset_group": "2B", "setup": { "position": "standing", "arms": "both" }, "youtube_query": "dumbbell lateral raise form" },
+        { "name": "Incline Rear Delt Fly", "sets": 4, "reps": "15", "rest_sec": 75, "rpe": 9, "tempo": "2:1:2", "cue": "4 sets! Reverse fly.", "adonis_level": 2, "superset_group": null, "youtube_query": "incline rear delt fly form" },
+        { "name": "Front Raise — Straight Bar", "sets": 3, "reps": "10-12", "rest_sec": 0, "ramp_up": 1, "rpe": 8, "tempo": "2:1:2", "cue": "Superset. Up to eye level.", "adonis_level": 1, "superset_group": "4A", "youtube_query": "barbell front raise form" },
+        { "name": "Triceps Kickback", "sets": 3, "reps": "12/arm", "rest_sec": 60, "rpe": 9, "tempo": "2:1:1", "cue": "Superset. Elbow locked in place.", "adonis_level": 0, "superset_group": "4B", "setup": { "arms": "single" }, "youtube_query": "dumbbell triceps kickback form" }
+      ],
+      "finisher": "LATERAL RAISE DROP SET: 15 heavy → 20 medium → 25 light, no rest!",
+      "mobility": [
+        { "name": "Rear Delt Stretch (each side)", "seconds": 45, "how_to": "Bring one straight arm across your chest and hold it above the elbow. Pull gently toward your chest, shoulder down and away from your ear — you'll feel it in the back of the shoulder. Switch sides.", "youtube_query": "posterior shoulder stretch" },
+        { "name": "Triceps Stretch (each side)", "seconds": 45, "how_to": "Raise one arm and bend the elbow so the hand drops behind your head. With the other hand, gently press the elbow down and back. Ribs down, don't arch your back. Switch sides.", "youtube_query": "overhead triceps stretch" },
+        { "name": "Band Face Pull ×15", "seconds": 40, "how_to": "Band anchored at face height, both hands on it. Pull toward your face, elbows flaring out and up, and squeeze your shoulder blades together. Pause one second and return under control. 15 slow reps.", "youtube_query": "band face pull" },
+        { "name": "Wall Angels ×10", "seconds": 30, "how_to": "Back, glutes and head against the wall, feet one step out. Arms in a W on the wall — elbows and forearms touching. Slide your arms up into a Y without lifting elbows or hands off the wall, then back down. 10 slow reps.", "youtube_query": "wall angels exercise" }
+      ]
+    },
+    {
+      "id": "pull_b",
+      "name": "PULL B",
+      "color": "#2E5A9C",
+      "focus": "Back thickness · Arms · Forearms",
+      "duration_min": 42,
+      "exercises": [
+        { "name": "Neutral-Grip Pull-Up", "sets": 4, "reps": "6-8", "rest_sec": 120, "bodyweight": true, "rpe": 8, "tempo": "2:1:3", "cue": "3-sec descent = V-Taper.", "adonis_level": 1, "superset_group": null, "youtube_query": "hammer grip pull up form" },
+        { "name": "Incline Row — Dumbbells", "sets": 3, "reps": "12", "rest_sec": 0, "ramp_up": 2, "rpe": 8, "tempo": "2:1:2", "cue": "Superset. Chest on the bench.", "adonis_level": 0, "superset_group": "2A", "youtube_query": "chest supported incline dumbbell row form" },
+        { "name": "Pullover — Dumbbell", "sets": 3, "reps": "12", "rest_sec": 75, "rpe": 8, "tempo": "3:1:2", "cue": "Superset. Lats twice a week.", "adonis_level": 1, "superset_group": "2B", "youtube_query": "dumbbell pullover form" },
+        { "name": "EZ-Bar Curl", "sets": 3, "reps": "10-12", "rest_sec": 0, "ramp_up": 1, "rpe": 8, "tempo": "2:1:2", "cue": "Superset. Your heaviest biceps lift.", "adonis_level": 0, "superset_group": "3A", "youtube_query": "ez bar curl form" },
+        { "name": "Hammer Curls", "sets": 3, "reps": "10-12", "rest_sec": 75, "rpe": 8, "tempo": "2:1:2", "cue": "Superset. Brachialis.", "adonis_level": 0, "superset_group": "3B", "setup": { "position": "standing", "arms": "alternating" }, "youtube_query": "dumbbell hammer curl form" },
+        { "name": "Wrist Curls (forearms)", "sets": 3, "reps": "15-20", "rest_sec": 60, "rpe": 8, "tempo": "1:1:1", "cue": "Full range.", "adonis_level": 0, "superset_group": null, "youtube_query": "barbell wrist curl form" }
+      ],
+      "finisher": "Arnold Curl 2×12 · Barbell Shrugs 2×15",
+      "mobility": [
+        { "name": "Biceps Stretch (each side)", "seconds": 30, "how_to": "Stand with your back to a wall or doorframe, palm on the wall behind you at shoulder height, fingers pointing back. Gently turn your body away from the hand until you feel it in the front shoulder and biceps. Switch sides.", "youtube_query": "wall biceps stretch" },
+        { "name": "Forearm Stretch (each side)", "seconds": 30, "how_to": "Arm straight out, palm up. With the other hand, gently pull the fingers down and back — stretch on the inner forearm. Then palm down and pull the back of the hand — stretch on the outer forearm. Switch sides.", "youtube_query": "forearm flexor stretch" },
+        { "name": "Side Lat Stretch (each side)", "seconds": 30, "how_to": "Stand and grab a bar or doorframe overhead with one hand, legs crossed. Push your hips and body away from the hand until you feel it along the side of your back, under the armpit. Switch sides.", "youtube_query": "standing side lat stretch" },
+        { "name": "Deep Breathing ×5", "seconds": 40, "how_to": "Lie on your back, one hand on your chest and one on your belly. Breathe in slowly through your nose — belly rises first, then chest. Exhale long through your mouth, twice as long as the inhale. 5 rounds to finish.", "youtube_query": "diaphragmatic breathing exercise" }
+      ]
+    },
+    {
+      "id": "legs_b",
+      "name": "LEGS B",
+      "color": "#3D7A3D",
+      "focus": "RDL · Glutes · Core",
+      "duration_min": 42,
+      "exercises": [
+        { "name": "Romanian Deadlift — Dumbbells", "sets": 4, "reps": "8-10", "rest_sec": 120, "ramp_up": 2, "rpe": 8, "tempo": "3:0:2", "cue": "3-sec descent! Feel the hamstrings stretch.", "adonis_level": 0, "superset_group": null, "youtube_query": "dumbbell romanian deadlift form" },
+        { "name": "Hip Thrust", "sets": 4, "reps": "10-12", "rest_sec": 90, "rpe": 8, "tempo": "1:2:1", "cue": "HOLD 2 sec. Squeeze the glutes.", "adonis_level": 0, "superset_group": null, "youtube_query": "barbell hip thrust form" },
+        { "name": "Goblet Squat — Kettlebell", "sets": 3, "reps": "15", "rest_sec": 75, "rpe": 8, "tempo": "2:1:2", "cue": "Full depth.", "adonis_level": 0, "superset_group": null, "youtube_query": "kettlebell goblet squat form" },
+        { "name": "Jump Squats", "sets": 4, "reps": "6", "rest_sec": 90, "rpe": 9, "tempo": "fast", "cue": "Soft landing. POWER.", "adonis_level": 0, "superset_group": null, "youtube_query": "jump squat form" }
+      ],
+      "finisher": "Core Power: Plank 3×60 → Side Plank 3×45/side → Hollow Hold 3×30",
+      "mobility": [
+        { "name": "Lying Hamstring Stretch (each side)", "seconds": 45, "how_to": "Lie on your back, one leg straight on the floor. Raise the other leg straight and hold behind the thigh or calf (or use a strap). Pull gently toward your chest, knee as straight as is comfortable. Switch sides.", "youtube_query": "supine hamstring stretch" },
+        { "name": "Glute Figure-4 (each side)", "seconds": 45, "how_to": "Lie on your back, knees bent. Cross one ankle over the opposite knee (a figure 4). Hold behind the supporting thigh and pull toward your chest — you'll feel it in the glute of the crossed leg. Switch sides.", "youtube_query": "figure 4 glute stretch" },
+        { "name": "Hip Flexor Couch (each side)", "seconds": 45, "how_to": "Kneel on one knee facing away from a couch or wall, back shin up against it, knee on the floor. Other foot forward. Stand tall and squeeze the glute — stretch in the front of the hip and quad. Switch sides.", "youtube_query": "couch stretch hip flexor" },
+        { "name": "Ankle Circles ×10", "seconds": 30, "how_to": "Sit or stand on one leg, the other foot slightly lifted. Draw big, slow circles from the ankle — 10 each direction. The shin stays still, only the ankle moves. Switch sides.", "youtube_query": "ankle circles mobility" }
+      ]
+    }
+  ],
+  "nutrition": {
+    "targets": { "kcal": 2300, "protein_g": 180, "fat_g": 70, "carbs_g": 250, "water_l": 3 },
+    "eating_window": "09:00-18:00",
+    "carry": { "protein_pct": 15, "carbs_pct": 25 },
+    "meals": [
+      { "name": "Breakfast", "time": "09:00", "items": "5 eggs + 2 egg whites · ½ avocado · 90g brown rice · bell pepper + cherry tomatoes · olive oil", "supplements": [{ "name": "Vitamin B complex", "form": "capsule" }, { "name": "D3+K2 (2 capsules)", "form": "capsule" }, { "name": "Creatine 5g", "form": "powder" }],
+        "components": [
+          { "name": "Whole eggs", "count": 5, "unit": "eggs", "role": "protein", "protein_g": 31 },
+          { "name": "Egg whites", "count": 2, "unit": "whites", "role": "protein", "protein_g": 7 },
+          { "name": "Brown rice", "grams": 90, "role": "carbs", "carbs_g": 23 },
+          { "name": "Avocado", "grams": 100, "role": "fat" }
+        ] },
+      { "name": "Lunch", "time": "13:00", "items": "250g chicken breast · 130g brown rice · vegetables · Brazil nut", "supplements": null,
+        "components": [
+          { "name": "Chicken breast", "grams": 250, "role": "protein", "protein_g": 78 },
+          { "name": "Brown rice", "grams": 130, "role": "carbs", "carbs_g": 33 },
+          { "name": "Vegetables", "role": "veg" }
+        ] },
+      { "name": "Dinner", "time": "17:30", "items": "200g chicken (salmon on Monday) · 150g sweet potato · 120g spinach · fruit", "supplements": null,
+        "components": [
+          { "name": "Chicken (salmon on Monday)", "grams": 200, "role": "protein", "protein_g": 50 },
+          { "name": "Sweet potato", "grams": 150, "role": "carbs", "carbs_g": 30 },
+          { "name": "Spinach", "grams": 120, "role": "veg" }
+        ] }
+    ],
+    "out_rules": [
+      "Protein first — chicken, fish or lean meat, palm-sized",
+      "Unlimited vegetables, sauce on the side",
+      "No fried food and no sugary drinks"
+    ],
+    "cheat_policy": "One free meal a week — enjoy all of it and get back on plan at the next meal.",
+    "rules": [
+      "Vitamin C with every iron-rich meal",
+      "No coffee/tea 09:00-11:00 (blocks iron absorption)",
+      "Spinach always cooked, with lemon",
+      "No dairy with iron-rich meals"
+    ]
+  },
+  "habits": [
+    "Water 3+ liters",
+    "Breakfast on plan",
+    "Lunch on plan",
+    "Dinner on plan",
+    "D3+K2 supplements"
+  ],
+  "weekly_win": {
+    "metrics": [
+      { "name": "Waist (cm)", "direction": "down_or_flat" },
+      { "name": "Lateral Raise Top Set", "direction": "up" },
+      { "name": "Sit & Reach", "direction": "up_or_flat" }
+    ],
+    "rule": "2 of 3 = a winning week"
+  },
+  "progression": {
+    "double_progression": "Start at the bottom of the rep range. Each week add 1 rep at the same weight. Hit the top of the range on every set — add 2.5 kg and drop back to the bottom.",
+    "hiit_phases": [
+      { "weeks": "3-4", "sprint_sec": 30, "rest_sec": 90, "rounds": 6 },
+      { "weeks": "5-7", "sprint_sec": 30, "rest_sec": 75, "rounds": 7 },
+      { "weeks": "9-11", "sprint_sec": 40, "rest_sec": 80, "rounds": 8 }
+    ]
+  },
+  "flexibility": {
+    "evening": [
+      { "name": "Standing Forward Fold", "seconds": 90, "cue": "Soft knees, just hang. Let gravity work", "how_to": "Stand hip-width apart and fold forward from the hips with soft knees. Hold your elbows or touch the floor, head heavy. With every exhale let your lower back lengthen — don't pull, let go.", "youtube_query": "standing forward fold stretch" },
+      { "name": "Seated Hamstring — Right", "seconds": 60, "cue": "Straight back! Hinge at the hips", "how_to": "Sit with your right leg straight out and your left leg bent, foot against the thigh. Long back, reach from the hips toward your right foot and exhale. Hold where you feel it behind the thigh, without pain.", "youtube_query": "seated hamstring stretch" },
+      { "name": "PNF Right: Contract", "seconds": 6, "cue": "Drive your heel into the floor hard!", "how_to": "Same position, hand on your foot or shin, and drive your heel into the floor as if trying to bend the knee — the hand resists. About 70% effort for 6 seconds, no movement. Then relax completely.", "youtube_query": "PNF hamstring stretch contract relax" },
+      { "name": "PNF Right: Go Deeper", "seconds": 20, "cue": "Relax. Now sink deeper", "how_to": "Right after you relax — exhale and reach forward into new depth, no bouncing. The range that opens after the contraction is the real stretch. Hold and breathe deep.", "youtube_query": "PNF hamstring stretch contract relax" },
+      { "name": "Seated Hamstring — Left", "seconds": 60, "cue": "Straight back! Hinge at the hips", "how_to": "Sit with your left leg straight out and your right leg bent, foot against the thigh. Long back, reach from the hips toward your left foot and exhale. Hold where you feel it behind the thigh, without pain.", "youtube_query": "seated hamstring stretch" },
+      { "name": "PNF Left: Contract", "seconds": 6, "cue": "Drive your heel into the floor hard!", "how_to": "Same position, hand on your foot or shin, and drive your heel into the floor as if trying to bend the knee — the hand resists. About 70% effort for 6 seconds, no movement. Then relax completely.", "youtube_query": "PNF hamstring stretch contract relax" },
+      { "name": "PNF Left: Go Deeper", "seconds": 20, "cue": "Relax. Now sink deeper", "how_to": "Right after you relax — exhale and reach forward into new depth, no bouncing. The range that opens after the contraction is the real stretch. Hold and breathe deep.", "youtube_query": "PNF hamstring stretch contract relax" },
+      { "name": "Cat-Cow", "seconds": 60, "cue": "Slow, with your breath. Every vertebra", "how_to": "On all fours, hands under shoulders and knees under hips. Inhale — belly drops, eyes up; exhale — round your back up, chin to chest. Move slowly through the whole spine, in rhythm with your breath.", "youtube_query": "cat cow stretch" },
+      { "name": "Child's Pose", "seconds": 90, "cue": "Breathe deep into your lower back", "how_to": "Kneel with knees slightly apart, sit back on your heels and rest your chest between your thighs. Arms straight out on the floor, forehead down. Breathe into your back — every exhale pushes your hips closer to your heels.", "youtube_query": "child's pose stretch" },
+      { "name": "Supine Twist — Right", "seconds": 60, "cue": "Shoulders on the floor", "how_to": "Lie on your back, bring your right knee to your chest, then across to the left side of your body. Right arm out to the side, eyes toward the right hand. Both shoulders stay on the floor — the twist comes from the mid-back, not the shoulder.", "youtube_query": "supine spinal twist stretch" },
+      { "name": "Supine Twist — Left", "seconds": 60, "cue": "Shoulders on the floor", "how_to": "Lie on your back, bring your left knee to your chest, then across to the right side of your body. Left arm out to the side, eyes toward the left hand. Both shoulders stay on the floor — the twist comes from the mid-back, not the shoulder.", "youtube_query": "supine spinal twist stretch" },
+      { "name": "90/90 Hip — Right", "seconds": 45, "cue": "Chest forward over the leg", "how_to": "Sit on the floor, right leg in front bent to 90° and left leg behind bent to 90°. Tall back, lean your chest over the front shin. If your right glute lifts, stop there — that's your range today.", "youtube_query": "90/90 hip stretch" },
+      { "name": "90/90 Hip — Left", "seconds": 45, "cue": "Chest forward over the leg", "how_to": "Sit on the floor, left leg in front bent to 90° and right leg behind bent to 90°. Tall back, lean your chest over the front shin. If your left glute lifts, stop there — that's your range today.", "youtube_query": "90/90 hip stretch" },
+      { "name": "Jefferson Curl (bodyweight or light)", "seconds": 45, "cue": "Roll down and up one vertebra at a time, very slow", "how_to": "Stand on a step or box, feet together. Roll your spine down one vertebra at a time — chin, neck, upper back, lower back — until your hands hang below your feet. Roll up in reverse. No weight, or 2-5 kg at most, very slowly.", "youtube_query": "jefferson curl mobility" }
+    ],
+    "morning": [
+      { "name": "Morning Cat-Cow", "seconds": 60, "cue": "Wake up your spine", "how_to": "On all fours, hands under shoulders and knees under hips. Inhale — belly drops, eyes up (cow); exhale — round your back up, chin to chest (cat). Slow, one vertebra at a time, in rhythm with your breath.", "youtube_query": "cat cow stretch" },
+      { "name": "Easy Forward Fold", "seconds": 45, "cue": "Knees bent, just let go", "how_to": "Stand hip-width apart, soft knees. Fold forward from the hips and let your head and arms hang heavy. In the morning don't push for depth — long exhales and your back releases on its own.", "youtube_query": "standing forward fold morning stretch" },
+      { "name": "Hip Circles", "seconds": 30, "cue": "Big hip circles, both directions", "how_to": "Stand, hands on your hips. Circle your hips big and slow — forward, side, back, side. Switch direction halfway. Soft knees, upper body barely moves.", "youtube_query": "standing hip circles mobility" },
+      { "name": "World's Greatest Stretch", "seconds": 45, "cue": "Deep lunge + rotation, switch sides", "how_to": "Step long into a lunge, both hands on the floor inside the front foot. Raise the inside hand to the ceiling with a chest rotation, eyes following, then bring it back. Back knee straight, back heel pressing back.", "youtube_query": "world's greatest stretch mobility" }
+    ],
+    "vacuum": [
+      { "name": "Vacuum · Round 1", "seconds": 20, "cue": "Blow it all out, pull your navel in", "how_to": "Standing or on all fours, on an empty stomach. Exhale all the air, then pull your navel in and up toward your spine — as if pinning it to your back. Hold without breathing in, ribs open. Release gently.", "youtube_query": "stomach vacuum exercise" },
+      { "name": "Rest", "seconds": 15, "cue": "Breathe normally", "how_to": "Breathe normally, arms loose. Let your belly settle before the next round — no rush.", "youtube_query": null },
+      { "name": "Vacuum · Round 2", "seconds": 20, "cue": "Don't breathe in!", "how_to": "Same as before: full exhale, navel in and up, hold without breathing. This time try to pull deeper in the last few seconds.", "youtube_query": "stomach vacuum exercise" },
+      { "name": "Rest", "seconds": 15, "cue": "Breathe normally", "how_to": "Breathe normally, arms loose. Let your belly settle before the next round — no rush.", "youtube_query": null },
+      { "name": "Vacuum · Round 3", "seconds": 20, "cue": "Blow it all out, pull your navel in", "how_to": "Last round: full exhale, navel in and up, and hold. If you run out of air — release, breathe, and grab it again. The quality of the pull matters more than the time.", "youtube_query": "stomach vacuum exercise" }
+    ]
+  }
+}
+```
