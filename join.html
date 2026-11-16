@@ -1,0 +1,37 @@
+<!doctype html><html lang="he" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/assets/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="stylesheet" href="/style.css?v=2611110100"><title>הצטרפות לצוות · IBRA</title>
+<style>
+.join{text-align:center;padding-top:8vh}
+.join .code{font:900 italic 56px/1 Heebo,system-ui,sans-serif;letter-spacing:2px;margin:28px 0 8px;direction:ltr}
+.join .open{display:block;background:#E8FF3C;color:#0A0A0C;font-weight:900;font-size:19px;padding:18px;border-radius:16px;margin:28px 0 12px;text-decoration:none}
+.join a.dl{display:block;background:none;color:#fff;opacity:.8;padding:10px;font-weight:600;text-decoration:underline;box-shadow:none}
+.join .muted{opacity:.7}
+</style></head><body><main class="join">
+<div class="lhead"><a class="brand" href="/">IBR<b>A</b></a></div>
+<h1 id="t">הוזמנת לצוות.</h1>
+<p class="muted" id="s">הקוד מהחבר שהזמין אותך:</p>
+<div class="code" id="code">IBR-···</div>
+<a class="open" id="open" href="ibra://join">פתח ב-IBRA ←</a>
+<a class="dl" id="ios" href="https://apps.apple.com/il/app/ibra/id6794155896">עוד אין לך IBRA? הורד ל-iPhone</a>
+<p class="muted" id="h">אחרי ההתקנה: הצוות › ״יש לי קוד צוות״, והקלד את הקוד.</p>
+</main>
+<script>
+(function(){
+  var c=(new URLSearchParams(location.search).get('c')||'').toUpperCase().replace(/[^A-Z0-9-]/g,'').slice(0,7);
+  if(!/^IBR-[A-Z0-9]{3}$/.test(c)) c='';
+  if(c){document.getElementById('code').textContent=c;document.getElementById('open').href='ibra://join?c='+encodeURIComponent(c);}
+  else{document.getElementById('code').textContent='';}
+  if(!/^he\b/i.test(navigator.language||'')){
+    var d=document.documentElement;d.lang='en';d.dir='ltr';document.title='Join a squad · IBRA';
+    document.getElementById('t').textContent='You’re invited to a squad.';
+    document.getElementById('s').textContent='Your friend’s code:';
+    document.getElementById('open').textContent='Open in IBRA →';
+    document.getElementById('ios').textContent='Don’t have IBRA yet? Get it for iPhone';
+    document.getElementById('h').textContent='After installing: Squad › “I have a squad code”, and type the code.';
+  }
+})();
+</script></body></html>
