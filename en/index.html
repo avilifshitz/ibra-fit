@@ -30,7 +30,7 @@
 <link rel="stylesheet" href="/style.css?v=2611110100">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
- {"@type":"MobileApplication","@id":"https://ibra.fit/en/#app","name":"IBRA","dateModified":"2026-11-11","url":"https://ibra.fit/en/","operatingSystem":"iOS 17 or later","applicationCategory":"HealthApplication","inLanguage":"en","description":"A workout app that builds a plan for your equipment, runs it and progresses it every week. If you want, connect your own AI (ChatGPT, Claude or Gemini) as your coach. Training needs no account and no server.","author":{"@id":"https://ibra.fit/#org"},"offers":[{"@type":"Offer","name":"IBRA","price":"0","priceCurrency":"USD","description":"Plan, workouts, weekly close and measurements. No payment, no AI needed."},{"@type":"Offer","name":"IBRA Pro, yearly","price":"69.99","priceCurrency":"USD","description":"The coach (ChatGPT, Claude or Gemini), photo analysis, body fat, posture and charts. Your AI chat is billed separately by its provider."},{"@type":"Offer","name":"IBRA Pro, monthly","price":"12.99","priceCurrency":"USD","description":"Same as yearly, billed monthly."}]},
+ {"@type":"MobileApplication","@id":"https://ibra.fit/en/#app","name":"IBRA","dateModified":"2026-11-26","url":"https://ibra.fit/en/","operatingSystem":"iOS 17 or later","applicationCategory":"HealthApplication","inLanguage":"en","description":"A workout app that builds a plan for your equipment, runs it and progresses it every week. If you want, connect your own AI (ChatGPT, Claude or Gemini) as your coach. Training needs no account. You can also train in a squad with your friends.","author":{"@id":"https://ibra.fit/#org"},"offers":[{"@type":"Offer","name":"IBRA","price":"0","priceCurrency":"USD","description":"Plan, workouts, weekly close and measurements. No payment, no AI needed."},{"@type":"Offer","name":"IBRA Pro, yearly","price":"69.99","priceCurrency":"USD","description":"The coach (ChatGPT, Claude or Gemini), photo analysis, body fat, posture and charts. Your AI chat is billed separately by its provider."},{"@type":"Offer","name":"IBRA Pro, monthly","price":"12.99","priceCurrency":"USD","description":"Same as yearly, billed monthly."}]},
  {"@type":"Organization","@id":"https://ibra.fit/#org","name":"IBRA","url":"https://ibra.fit/","email":"support@ibra.fit","founder":{"@type":"Person","name":"A.Y. Lifshitz"},"address":{"@type":"PostalAddress","addressCountry":"IL"}}
 ]}
 </script>
@@ -39,7 +39,7 @@
 <div class="wrap">
 <nav aria-label="Main">
   <a class="brand" href="/en/" aria-label="IBRA">IBR<b>A</b></a>
-  <ul><li><a href="#how">How it works</a></li><li><a href="#close">The coach</a></li><li><a href="#rank">Ranks</a></li><li><a href="#price">Price</a></li></ul>
+  <ul><li><a href="#how">How it works</a></li><li><a href="#close">The coach</a></li><li><a href="#rank">Ranks</a></li><li><a href="#crew">Squad</a></li><li><a href="#price">Price</a></li></ul>
   <span class="badges"><a class="lang" href="/" hreflang="he" lang="he">עברית</a><a class="badge sm" href="https://apps.apple.com/app/ibra/id6794155896"><img src="/assets/appstore-en.svg" width="116" height="40" alt="Download on the App Store"></a></span>
 </nav>
 
@@ -47,7 +47,7 @@
   <div>
     <p class="ask">Training at home<br>and not seeing results?</p>
     <h1 class="pain">Pick the body<br>you want.<br><em>IBRA builds<br><span class="nw">the way there.</span></em></h1>
-    <p class="why"><b>A plan for the gear you have at home.</b> Every week it measures your shoulders, waist and photos, and aims every workout at your goal.</p>
+    <p class="why"><b>A plan for the gear you have at home.</b> Every week it measures you, every 3 weeks it takes photos, and it aims every workout at your goal.</p>
     <p class="wk"><b>7 weeks.</b> At home.<small>IBRA's founder</small></p>
     <p class="proof3"><span><b>+5.5 <i>cm</i></b>shoulders</span><span><b>−2 <i>cm</i></b>waist</span><span><b>−3%</b>body fat</span><span><b>+84%</b>squat strength</span></p>
     <div class="cta">
@@ -263,6 +263,21 @@
   </div>
 </section>
 
+<section id="crew">
+  <div class="crow"><div>
+    <h2>Train with your friends.<br><em>Each at home.</em></h2>
+    <p class="lede">A squad of up to 8, invite only. See who closed the week, who broke a record and who ranked up, and react with a tap. At the end of the month, see how far the squad climbed together.</p>
+    <p class="cfine">Only what you choose to share leaves your phone. Free.</p>
+  </div></div>
+</section>
+<style>
+.crow{display:flex;flex-direction:column;gap:24px;align-items:flex-start}
+@media(min-width:860px){.crow{flex-direction:row;align-items:center;justify-content:space-between}}
+.cshots{display:flex;gap:12px;width:100%;max-width:426px}.cshots img{width:calc(50% - 6px);height:auto;border-radius:22px;border:1px solid rgba(255,255,255,.12)}
+@media(min-width:860px){.cshots img{width:207px}}
+.cfine{opacity:.6;font-size:14px;margin-top:10px}
+</style>
+
 <section id="watch">
   <div class="wrow" style="margin-top:0"><div class="w5" aria-label="Today on the watch: easy walk, sprints, every minute and plank, each with a Start button">
       <span class="wt">7:12</span>
@@ -283,13 +298,14 @@
 </section>
 <section id="price">
   <p class="vision">Every man can become<br><em>a man of valor.</em></p>
-  <h2>For every man.<br><em>Free.</em></h2>
+  <h2>Go far for free.<br><em>Get there faster with Pro.</em></h2>
   <div class="tiers2">
     <div class="t2"><p class="t2n">IBRA</p><p class="t2p">$0</p><p class="t2s">Forever. No AI, no credit card.</p>
-      <ul class="incl"><li>A plan for your gear</li><li>Workouts, weekly close and measurements</li><li>The fitness test and the posture plan</li><li>Your timeline to the goal, as an estimate</li><li>Up to Son of Valor</li></ul></div>
+      <p class="t2h">Your plan progresses on its own, every week.</p>
+      <ul class="incl"><li>A plan for your gear</li><li>Workouts, weekly close and measurements</li><li>The fitness test, calisthenics and the posture plan</li><li>The squad</li><li>The rank Son of Valor</li></ul></div>
     <div class="t2 pro"><p class="t2n">IBRA Pro</p><p class="t2p">$12.99 <span>a month</span></p><p class="t2s">Or $69.99 a year: $5.83 a month, save 55%</p>
-      <p class="t2h">The most precise coach we could build you.</p>
-      <ul class="incl"><li>Works with ChatGPT, Claude and Gemini</li><li>Sees your photos and fine-tunes every week</li><li>Body fat, posture and charts</li><li><span class="nw">Apple Watch</span>: your workout on your wrist</li><li>A precise timeline, and your meal plan</li><li>Up to Mighty Man of Valor</li></ul></div>
+      <p class="t2h">Same road, shorter: your coach fine-tunes every week to your body.</p>
+      <ul class="incl"><li>Works with ChatGPT, Claude and Gemini</li><li>Sees your photos and fine-tunes every week</li><li>Body fat, posture and charts</li><li><span class="nw">Apple Watch</span>: your workout on your wrist</li><li>A precise timeline, and your meal plan</li><li>All three ranks, up to Mighty Man of Valor</li></ul></div>
   </div>
   <p class="fine">Your first close with the coach is on us. Cancelling never deletes your data. You bring the AI from the account you already have; we don't charge for it. Prices in USD; your App Store shows the price in your currency.</p>
 </section>
