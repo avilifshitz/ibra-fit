@@ -996,6 +996,8 @@ html:not(.js) .scene .txts>*{position:static;opacity:1;transform:none;margin-top
 .vs .vd li:first-child{border-top:0}
 .vs .vd li::before{content:"✓";flex:none;width:26px;height:26px;border-radius:13px;background:var(--lime);color:#0A0A0C;font-weight:900;font-size:15px;display:flex;align-items:center;justify-content:center;margin-top:1px}
 .vs .vd p{margin:12px 0 0;color:var(--muted);font-size:15px}
+.vs .vd.alt{border-color:var(--line)}
+.vs .vd.alt li::before{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
 .vs .cap{margin-top:40px}
 .vs .cap h2{margin:0}
 .vs .ct{width:100%;border-collapse:collapse;margin-top:16px;table-layout:fixed}
