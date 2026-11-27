@@ -1364,3 +1364,5 @@ bdi[dir="ltr"]{white-space:nowrap}
 @media (max-width:720px){.hero .hv{display:none}}
 .hero .hv{justify-self:center}
 @media (min-width:721px){html[dir=rtl] #train .trainrow .seeshot{display:none}}
+/* תג Play בלי שוליים פנימיים; תג אפל עם ~2.2% שוליים. מיישרים לגובה הנראה של אפל (53.5 מתוך 56) */
+.badge.play img{transform:scale(.955)}
