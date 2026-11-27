@@ -44,7 +44,7 @@ footer a{color:var(--muted)}
 .badge:hover{opacity:.9}
 .badge:active{transform:scale(.97)}
 .badges{display:inline-flex;align-items:center;gap:12px;flex-wrap:wrap}
-.badge.play[hidden]{display:none}
+.badge.play[hidden]{display:none!important}
 @media (max-width:720px){.badge.sm.play{display:none}}
 @media (max-width:720px){.badges .badge img{height:50px}.badges .badge.sm img{height:36px}.site .close .badges .badge img{height:50px}}
 
@@ -993,9 +993,9 @@ html:not(.js) .scene .txts>*{position:static;opacity:1;transform:none;margin-top
 .vs .vd{margin-top:28px;padding:22px 20px;border:1px solid var(--lime);border-radius:22px;background:var(--card)}
 .vs .vd h2{font-size:24px;margin:0 0 12px}
 .vs .vd ul{list-style:none;margin:0;padding:0}
-.vs .vd li{display:flex;gap:12px;align-items:flex-start;padding:10px 0;border-top:1px solid var(--line);color:var(--ink);font-size:17px;font-weight:700;line-height:1.4}
+.vs .vd li{position:relative;padding:10px 0;padding-inline-start:38px;border-top:1px solid var(--line);color:var(--ink);font-size:17px;font-weight:700;line-height:1.4}
 .vs .vd li:first-child{border-top:0}
-.vs .vd li::before{content:"✓";flex:none;width:26px;height:26px;border-radius:13px;background:var(--lime);color:#0A0A0C;font-weight:900;font-size:15px;display:flex;align-items:center;justify-content:center;margin-top:1px}
+.vs .vd li::before{content:"✓";position:absolute;inset-inline-start:0;top:10px;width:26px;height:26px;border-radius:13px;background:var(--lime);color:#0A0A0C;font-weight:900;font-size:15px;display:flex;align-items:center;justify-content:center;margin-top:1px}
 .vs .vd p{margin:12px 0 0;color:var(--muted);font-size:15px}
 .vs .vd.alt{border-color:var(--line)}
 .vs .vd.alt li::before{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
@@ -1359,3 +1359,8 @@ bdi[dir="ltr"]{white-space:nowrap}
 [dir=ltr] .saw .plan{border-right:0;padding-right:0;border-left:2px solid var(--line);padding-left:10px}
 .text p.sig{display:block;max-width:none}
 .lhead{display:flex;justify-content:space-between;align-items:baseline}main .lhead .lang{color:var(--muted);text-decoration:none}
+/* הירו במחשב: הסרטון ליד הטקסט; בטלפון ההירו נשאר טקסט ו-CTA */
+.hero .hv{margin:0}.hero .hv .shot{max-width:300px}
+@media (max-width:720px){.hero .hv{display:none}}
+.hero .hv{justify-self:center}
+@media (min-width:721px){html[dir=rtl] #train .trainrow .seeshot{display:none}}
